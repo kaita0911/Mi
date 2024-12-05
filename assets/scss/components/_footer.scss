@@ -1,0 +1,138 @@
+.p-footer {
+    color: #69767f;
+    padding: rem(35px) 0 rem(25px);
+    background: #1d1d1d;
+    background-image: url(../images/bg_footer.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 50%;
+
+    &-content {
+        @include mq("md", min) {
+            display: flex;
+
+        }
+    }
+
+    .logofooter {
+        max-width: rem(260px);
+    }
+
+    &-item {
+
+        font-size: rem(14px);
+        color: #fff;
+
+        @include mq("md", min) {
+            font-size: rem(16px);
+            width: 30%;
+            line-height: 2;
+
+            &.--02 {
+                width: 40%;
+                text-align: center;
+            }
+
+        }
+
+        &__ttl {
+            color: $primary;
+            font-size: rem(18px);
+            font-weight: bold;
+            margin-bottom: rem(5px);
+            margin-top: rem(15px);
+
+            @include mq("md", min) {
+                margin-top: 0;
+                margin-bottom: rem(23px);
+                font-size: rem(22px);
+            }
+        }
+
+        &__lst li a {
+            display: block;
+            padding: rem(5px) 0;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            color: #fff;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .bct {
+            margin: rem(20px) 0;
+        }
+
+        .social {
+            margin-top: rem(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(10px);
+
+            a {
+
+                .img {
+
+                    width: rem(40px);
+                    height: rem(40px);
+
+
+                }
+            }
+        }
+
+        .p-tag {
+            margin-top: rem(20px);
+
+            .tag {
+                color: $primary;
+                border-right: 1px solid #69767f;
+                padding: 0 rem(10px);
+
+                &:hover {
+                    color: #2196f3;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: rem(59px);
+        color: $white;
+        font-size: rem(12px);
+
+        @include mq("md", min) {
+            font-size: rem(16px);
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.scroll-top {
+    display: inline-flex;
+    position: fixed;
+    right: rem(10px);
+    bottom: rem(10px);
+    z-index: 2;
+    background: #2f2f2f;
+    width: rem(60px);
+    height: rem(60px);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+        width: rem(20px);
+    }
+
+    &:hover {
+        background: $primary;
+    }
+}

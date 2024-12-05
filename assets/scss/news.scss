@@ -1,0 +1,178 @@
+@import "common/variables";
+@import "common/mixin";
+
+.p-news {
+    padding: rem(30px) 0 rem(50px);
+
+    .ttl01 {
+        text-align: left;
+        margin-bottom: rem(10px);
+        color: #333;
+        font-size: rem(20px);
+
+        @include mq("md", min) {
+            font-size: rem(30px);
+        }
+    }
+
+    &__wrap {
+        @include mq("md", min) {
+            display: flex;
+            gap: rem(50px);
+        }
+    }
+
+    &__main {
+        @include mq("sm", min) {
+            @include mq("md") {
+                display: flex;
+                gap: rem(15px);
+                flex-wrap: wrap;
+            }
+        }
+
+        @include mq("md", min) {
+            width: 75%;
+        }
+    }
+   
+    &__content {
+        @include mq("md", min) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(50px);
+        }
+    }
+
+    &__btn {
+        .tlink {
+            display: inline-block;
+            font-size: rem(15px);
+            margin: rem(10px) auto rem(15px);
+            padding: rem(5px) rem(15px);
+            text-align: center;
+            background: #f73532;
+            border: 1px solid #ed0d09;
+            border-bottom-width: rem(3px);
+            color: #fff;
+            height: rem(40px);
+            line-height: 1.6;
+            text-transform: uppercase;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            &:hover {
+                background: $primary;
+                border: 1px solid $primary;
+            }
+        }
+    }
+
+    .sidebar {
+        @include mq("md") {
+            display: none;
+        }
+
+        @include mq("md", min) {
+            width: 25%;
+        }
+    }
+
+    &__item {
+        &__img {
+            width: 100%;
+            display: block;
+            height: rem(370px);
+        }
+
+        &__ttl {
+            font-size: rem(15px);
+            display: 600;
+            margin-bottom: rem(5px);
+            margin-top: rem(10px);
+            font-weight: 700;
+
+            @include mq("md", min) {
+                margin-top: rem(16px);
+                font-size: rem(18px);
+            }
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        &__date {
+            background: url(../images/ic_calendar.svg) no-repeat left center;
+            background-size: rem(10px) rem(10px);
+            padding-left: rem(15px);
+            font-size: rem(14px);
+
+            @include mq("md", min) {
+                font-size: rem(16px);
+                background-size: rem(15px) rem(15px);
+                padding-left: rem(25px);
+            }
+            &.--detail {
+                font-style: italic;
+                color: #999;
+                font-size: rem(16px);
+            }
+        }
+
+        &__short {
+            margin-top: rem(5px);
+            color: #666;
+            font-size: rem(14px);
+
+            @include mq("md", min) {
+                font-size: rem(16px);
+            }
+        }
+    }
+
+    &__description {
+        @include mq("md") {
+            font-size: rem(14px);
+        }
+        font-size: rem(16px);
+        line-height: 1.6;
+        .ttl01 {
+            text-transform: none;
+        }
+
+        ul {
+            margin: rem(15px) 0 rem(15px) rem(15px);
+
+            li {
+                list-style: disc;
+            }
+        }
+        &__img {
+            margin-bottom: rem(20px);
+        }
+    }
+
+    &__related {
+        &__ttl {
+            display: block;
+            background-image: url(../images/ic_double_right.svg);
+            background-repeat: no-repeat;
+            background-position: left rem(8px);
+            background-size: rem(15px) rem(15px);
+            margin: rem(7px) 0;
+            font-size: rem(14px);
+            padding-left: rem(20px);
+
+            @include mq("md", min) {
+                background-position: left center;
+                background-size: rem(20px) rem(20px);
+                margin: rem(7px) 0;
+                font-size: rem(16px);
+                padding-left: rem(25px);
+            }
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
